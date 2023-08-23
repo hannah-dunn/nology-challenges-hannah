@@ -1,0 +1,35 @@
+section {
+  border: 2px solid palevioletred;
+  display: flex;
+  align-items: center;
+  width: 900px;
+  height: 300px;
+  justify-content: space-around;
+}
+
+#blueBox {
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33.3%;
+  height: 100%;
+}
+
+#orangeBox {
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33.3%;
+  height: 100%;
+}
+
+#pinkBox {
+  background-color: lightpink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33.3%;
+  height: 100%;
+}
