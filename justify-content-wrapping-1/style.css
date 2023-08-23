@@ -1,0 +1,42 @@
+section {
+  display: flex;
+  border: 1px solid blue;
+  flex-wrap: wrap;
+  height: 300px;
+}
+
+#blueBox {
+  background-color: lightblue;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#orangeBox {
+  background-color: orange;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pinkBox {
+  background-color: lightpink;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#redBox {
+  background-color: crimson;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
