@@ -1,0 +1,18 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.pink-box {
+  background-color: rgb(236, 99, 172);
+  padding: 50px;
+  border: 1px solid orange;
+}
+
+.green-box {
+  border: 3px solid orange;
+  background-color: rgb(159, 223, 62);
+  padding: 30px 0px;
+}
+p {
+  padding-left: 20px;
+}
