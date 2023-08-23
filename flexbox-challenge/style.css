@@ -11,22 +11,25 @@ section {
   background-color: lightblue;
   display: flex;
   align-items: center;
-  width: 300px;
-  height: 300px;
+  justify-content: center;
+  width: 33.3%;
+  height: 100%;
 }
 
 #orangeBox {
   background-color: orange;
   display: flex;
   align-items: center;
-  width: 300px;
-  height: 300px;
+  justify-content: center;
+  width: 33.3%;
+  height: 100%;
 }
 
 #pinkBox {
   background-color: lightpink;
   display: flex;
   align-items: center;
-  width: 300px;
-  height: 300px;
+  justify-content: center;
+  width: 33.3%;
+  height: 100%;
 }
