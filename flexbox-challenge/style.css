@@ -1,0 +1,32 @@
+section {
+  border: 2px solid palevioletred;
+  display: flex;
+  align-items: center;
+  width: 900px;
+  height: 300px;
+  justify-content: space-around;
+}
+
+#blueBox {
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+}
+
+#orangeBox {
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+}
+
+#pinkBox {
+  background-color: lightpink;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+}
