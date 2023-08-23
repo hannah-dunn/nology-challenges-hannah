@@ -1,0 +1,32 @@
+div {
+  margin-left: 30px;
+}
+
+article {
+  margin-left: 30px;
+}
+
+section {
+  margin-left: 30px;
+}
+
+article p + p {
+  color: blue;
+}
+
+section {
+  text-decoration: underline;
+  color: black;
+}
+
+div > p + p {
+  color: grey;
+}
+
+div p {
+  font-style: italic;
+}
+
+div p + p {
+  font-style: normal;
+}
