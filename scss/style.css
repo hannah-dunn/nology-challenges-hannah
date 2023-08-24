@@ -1,0 +1,11 @@
+h1 {
+  color: blueviolet;
+  border: 1px solid red;
+}
+
+.card {
+  background-color: beige;
+}
+.card__title {
+  color: violet;
+}

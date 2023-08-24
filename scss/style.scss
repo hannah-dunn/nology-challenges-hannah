@@ -1,0 +1,19 @@
+@use "./partials/typography";
+@use "./partials/margins.scss";
+@use "./partials/pallete";
+
+// $brand-colour: violet;
+// $background-colour: cyan;
+
+h1 {
+  color: blueviolet;
+  border: 1px solid red;
+}
+
+.card {
+  background-color: beige;
+
+  &__title {
+    color: pallete.$brand-colour;
+  }
+}
