@@ -1,0 +1,49 @@
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+// german flag
+@media screen and (max-width: 600px) {
+  .flag {
+    &--one {
+      background-color: black;
+    }
+    &--two {
+      background-color: red;
+    }
+    &--three {
+      background-color: yellow;
+    }
+  }
+}
+
+// belgian flag
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .flag {
+    &--one {
+      background-color: rgb(46, 45, 45);
+    }
+    &--two {
+      background-color: rgb(228, 110, 110);
+    }
+    &--three {
+      background-color: rgb(234, 234, 110);
+    }
+  }
+}
+
+// irish flag
+@media screen and (min-width: 901px) {
+  .flag {
+    &--one {
+      background-color: rgb(17, 190, 17);
+    }
+    &--two {
+      background-color: white;
+    }
+    &--three {
+      background-color: orange;
+    }
+  }
+}

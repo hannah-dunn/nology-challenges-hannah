@@ -1,0 +1,38 @@
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  .flag--one {
+    background-color: black;
+  }
+  .flag--two {
+    background-color: red;
+  }
+  .flag--three {
+    background-color: yellow;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .flag--one {
+    background-color: rgb(46, 45, 45);
+  }
+  .flag--two {
+    background-color: rgb(228, 110, 110);
+  }
+  .flag--three {
+    background-color: rgb(234, 234, 110);
+  }
+}
+@media screen and (min-width: 901px) {
+  .flag--one {
+    background-color: rgb(17, 190, 17);
+  }
+  .flag--two {
+    background-color: white;
+  }
+  .flag--three {
+    background-color: orange;
+  }
+}
