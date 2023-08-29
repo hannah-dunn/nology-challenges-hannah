@@ -12,6 +12,8 @@ let y = 10;
 
 if (x > y) {
   console.log("x is greater than y");
-} else {
+} else if (x < y) {
   console.log("y is greater than x");
+} else {
+  console.log("both values are equal");
 }
