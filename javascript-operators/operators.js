@@ -5,7 +5,7 @@
 "2" + 3 === 5; // false because the types arent the same
 10 % 3; // 1, modulus, division remainder
 10 % 3 === 1; // true? but maybe needs brackets to do the maths in order?
-(100 % 7) % 5; // 
+(100 % 7) % 5; //
 (100 % 7) % 5 !== 0; // !== means doesn't equal of value AND type
 (100 % 7) % 9 == 2; //
 !(10 % 2); // ! is not,
