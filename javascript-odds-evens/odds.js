@@ -14,6 +14,13 @@ if (n % 2 == 0) {
   console.log("n is odd");
 }
 
+let m = 2;
+
+if (typeof m === "number") {
+  if (m % 2 === 0) console.log("m is even");
+  else console.log("m is odd");
+} else console.log("Invalid m");
+
 // else {
 //     console.log("Invalid n")
 // }
