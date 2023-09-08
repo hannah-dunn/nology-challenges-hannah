@@ -7,24 +7,25 @@
 // countOccurances([1,2,1,3,4,1,1,2,4], 3) SHOULD RETURN 1
 // countOccurances(["Alex", "Remi", "calum", "Alex"], "Alex") SHOULD RETURN 2
 
+function countOccurances(arr, element) {
+  let count = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === element) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
 // function countOccurances(arr, element) {
-//   let count = 0;
-
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] === element) {
-//       count++;
-//     }
-//   }
-
-//   return count;
+//   let count = {
+//     key1: arr,
+//     key2: element,
+//   };
 // }
 
-function countOccurances(arr, element) {
-    let count = {
-        key1: arr,
-        key2: element,
-    }
-    
-  }
+// this does nothing
 
 console.log(countOccurances([1, 2, 1, 3, 4, 1, 1, 2, 4], 1));
