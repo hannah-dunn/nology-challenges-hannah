@@ -3,7 +3,7 @@
 //   expect(true).toBe(true);
 // });
 
-import { rectangleArea } from "./rectangleArea.js";
+import { incorrectArgTypeError, rectangleArea } from "./rectangleArea.js";
 
 describe("test cases for a function that calculates the area of a rectangle", () => {
   it("returns the right area for two valid numbers", () => {
@@ -15,6 +15,31 @@ describe("test cases for a function that calculates the area of a rectangle", ()
   it("throws an error when incorrect argument type is passed", () => {
     expect(() => {
       rectangleArea("hi", "hi");
-    }).toThrow(new Error("Some error"));
+    }).toThrow(incorrectArgTypeError);
+    // }).toThrow(new Error("Incorrect argument type, args must be numbers"));
+    expect(() => {
+      rectangleArea("hi", 23);
+    }).toThrow(incorrectArgTypeError);
+  });
+
+  it("should throw an error when one or more arguments are 0 or negative numbers", () => {
+    expect(() => {
+      rectangleArea(-78, 0);
+    }).toThrow(new Error("Both args must be positive numbers"));
+    expect(() => {
+      rectangleArea(-78, -98);
+    }).toThrow(new Error("Both args must be positive numbers"));
+    expect(() => {
+      rectangleArea(0, 98);
+    }).toThrow(new Error("Both args must be positive numbers"));
+    expect(() => {
+      rectangleArea(10, -98);
+    }).toThrow(new Error("Both args must be positive numbers"));
+  });
+
+  it("should throw an error when less than 2 arguments are passed", () => {
+    expect(() => {
+      rectangleArea();
+    }).toThrow(new Error("This function needs two arguments"));
   });
 });
