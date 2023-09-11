@@ -27,3 +27,21 @@ export const sum = (numbers) => {
 };
 
 console.log(sum(2, 3, 4, 5));
+
+// martynas solution
+// export const noArgsError = new Error("At least one argument must be passed");
+// export const invalidArgsError = new Error("All arguments must be numbers");
+// export const sum = (...numbers) => {
+//     // this is an array
+//     console.log(numbers);
+
+//     if (numbers.length === 0) {
+//         throw noArgsError;
+//     }
+
+//     if (numbers.filter((num) => typeof num !== "number").length > 0) {
+//         throw invalidArgsError;
+//     }
+
+//     return numbers.reduce((acc, curr) => (acc += curr));
+// };
