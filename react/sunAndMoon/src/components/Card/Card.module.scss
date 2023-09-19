@@ -1,0 +1,25 @@
+img {
+  width: 100px;
+  height: inherit;
+}
+
+.card {
+  margin-bottom: 1em;
+  width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+.lightMode {
+  background-color: whitesmoke;
+}
+
+.darkMode {
+  background-color: rgb(28, 28, 28);
+  color: whitesmoke;
+
+  & button {
+    background-color: whitesmoke;
+    color: black;
+  }
+}
