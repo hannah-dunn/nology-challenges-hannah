@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "title": "Portfolio",
+    "techStack": ["HTML", "CSS", "SCSS"],
+    "description": "A personal website all about me",
+    "deployedLink": "https://netlify.com",
+    "githubLink": "https://github.com",
+    "imageLink": "http://placekitten.com/g/200/300"
+  },
+
+  {
+    "id": 2,
+    "title": "FakeOS",
+    "techStack": ["HTML", "CSS", "SCSS", "Javascript"],
+    "description": "Make an SPA which replicates an orperating system",
+    "deployedLink": "https://netlify.com",
+    "githubLink": "https://github.com",
+    "imageLink": "http://placekitten.com/g/200/300"
+  },
+
+  {
+    "id": 3,
+    "title": "MorseCode Translator",
+    "techStack": ["HTML", "CSS", "SCSS"],
+    "description": "A personal website all about me",
+    "deployedLink": "https://netlify.com",
+    "githubLink": "https://github.com",
+    "imageLink": "http://placekitten.com/g/200/300"
+  },
+  {
+    "id": 4,
+    "title": "Google Books",
+    "techStack": ["React", "SCSS"],
+    "description": "A pfrontend to search through books using the Google API",
+    "deployedLink": "https://netlify.com",
+    "githubLink": "https://github.com",
+    "imageLink": "http://placekitten.com/g/200/300"
+  }
+]
