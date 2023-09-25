@@ -8,8 +8,7 @@ const ProjectCard = ({ project }) => {
       <h3>{project.title}</h3>
       <img src={project.imageLink} alt={project.title} />
       <p>{project.description}</p>
-      {/* <Link to={project.deployedLink}>Deployed</Link>
-      <Link to={project.deployedLink}>GithubLink</Link> */}
+      <Link to={`${project.id}`}>See More</Link>
     </div>
   );
 };
