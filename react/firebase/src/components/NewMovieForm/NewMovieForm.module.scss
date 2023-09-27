@@ -1,0 +1,28 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 50%;
+  min-width: min-content;
+  margin: auto;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  padding: 0.25em;
+}
+
+.input_error {
+  border: 1px solid red;
+}
+
+.error_message {
+  font-size: x-small;
+  color: red;
+}
+.error_container {
+  border: 1px solid transparent;
+  height: 1em;
+}
