@@ -1,4 +1,4 @@
-import styles from "./Post.modules.scss";
+import styles from "./Post.module.scss";
 
 const Post = ({ post }) => {
   const { title, content, category } = post;
