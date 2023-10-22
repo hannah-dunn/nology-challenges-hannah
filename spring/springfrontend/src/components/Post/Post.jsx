@@ -1,12 +1,26 @@
+import { deletePost } from "../../services/posts";
 import styles from "./Post.module.scss";
 
-const Post = ({ post }) => {
-  const { title, content, category } = post;
+const Post = ({ post, added, setAdded }) => {
+  const { title, content, category, id } = post;
+
+  const handleClick = async () => {
+    try {
+      await deletePost(id);
+      console.log("deleted");
+      setAdded(added + 1);
+    } catch (e) {
+      console.log(e.message);
+    }
+  };
   return (
     <div className={styles.post}>
       <h3>{title}</h3>
       <p>{content}</p>
       <small>{category}</small>
+      <div>
+        <button onClick={handleClick}>Delete</button>
+      </div>
     </div>
   );
 };
