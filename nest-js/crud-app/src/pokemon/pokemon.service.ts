@@ -7,6 +7,7 @@ import { plainToInstance } from 'class-transformer';
 import { UpdatePokemonDTO } from './dto/update-pokemon.dto';
 import { wrap } from '@mikro-orm/core';
 import { PokemonTypeService } from './pokemon-type.service';
+import { FilterQueryDto } from './dto/filter-query.dto';
 
 @Injectable()
 export class PokemonService {
@@ -63,4 +64,18 @@ export class PokemonService {
   // async filterPokemon(data: CreatePokemonDto): Promise<Pokemon | null> {
   //   const { typeIds } = CreatePokemonDto;
   // }
+
+  async findAllByQuery(queryParams: FilterQueryDto) {
+    const { type, minHp = 5 } = queryParams;
+    if (!type) {
+      return await this.pokemonRepository.find({ maxHp: { $gte: minHp } });
+    }
+    const pokemonType = await this.pokemonTypeService.findOneByName(type);
+    if (!pokemonType) {
+      return [];
+    }
+    return await this.pokemonRepository.find({
+      $and: [{ types: pokemonType }, { maxHp: { $gte: minHp } }],
+    });
+  }
 }

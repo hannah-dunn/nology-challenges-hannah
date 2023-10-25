@@ -16,4 +16,8 @@ export class PokemonTypeService {
   async findByIdArray(ids: number[]) {
     return this.pokemonTypeRespository.find({ id: { $in: ids } });
   }
+
+  async findOneByName(name: string): Promise<PokemonType | null> {
+    return this.pokemonTypeRespository.findOne({ name });
+  }
 }

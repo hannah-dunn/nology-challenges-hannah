@@ -31,25 +31,25 @@ import {
 //   'fairy',
 // ];
 
-enum PokemonType {
-  FIRE = 'fire',
-  WATER = 'water',
-  GRASS = 'grass',
-  ELECTRIC = 'electric',
-  ICE = 'ice',
-  FIGHTING = 'fighting',
-  POSION = 'poison',
-  GROUND = 'ground',
-  FLYING = 'flying',
-  PYSCHIC = 'pyschic',
-  BUG = 'bug',
-  ROCK = 'rock',
-  GHOST = 'ghost',
-  DARK = 'dark',
-  DRAGON = 'dragon',
-  STEEL = 'steel',
-  FARIY = 'fairy',
-}
+// enum PokemonType {
+//   FIRE = 'fire',
+//   WATER = 'water',
+//   GRASS = 'grass',
+//   ELECTRIC = 'electric',
+//   ICE = 'ice',
+//   FIGHTING = 'fighting',
+//   POSION = 'poison',
+//   GROUND = 'ground',
+//   FLYING = 'flying',
+//   PYSCHIC = 'pyschic',
+//   BUG = 'bug',
+//   ROCK = 'rock',
+//   GHOST = 'ghost',
+//   DARK = 'dark',
+//   DRAGON = 'dragon',
+//   STEEL = 'steel',
+//   FARIY = 'fairy',
+// }
 
 export class CreatePokemonDto {
   @IsNotEmpty()

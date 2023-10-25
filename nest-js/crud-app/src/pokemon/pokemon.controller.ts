@@ -10,6 +10,7 @@ import {
   Delete,
   HttpCode,
   BadRequestException,
+  Query,
 } from '@nestjs/common';
 import { PokemonService } from './pokemon.service';
 import { CreatePokemonDto } from './dto/create-pokemon.dto';
@@ -17,6 +18,7 @@ import { Pokemon } from './entities/pokemon.entity';
 import { UpdatePokemonDTO } from './dto/update-pokemon.dto';
 import { PokemonTypeService } from './pokemon-type.service';
 import { PokemonType } from './entities/pokemon-type.entity';
+import { FilterQueryDto } from './dto/filter-query.dto';
 
 @Controller('/pokemon')
 export class PokemonController {
@@ -31,8 +33,11 @@ export class PokemonController {
   }
 
   @Get()
-  async findAll(): Promise<Pokemon[]> {
-    return await this.pokemonService.findAll();
+  async findAll(@Query() queryParams: FilterQueryDto): Promise<Pokemon[]> {
+    if (Object.keys(queryParams).length === 0) {
+      return await this.pokemonService.findAll();
+    }
+    return await this.pokemonService.findAllByQuery(queryParams);
   }
 
   @Get('/types')
