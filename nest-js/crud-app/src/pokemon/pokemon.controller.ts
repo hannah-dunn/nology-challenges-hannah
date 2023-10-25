@@ -41,7 +41,7 @@ export class PokemonController {
   }
 
   @Get('/:id')
-  async findById(@Param('id', ParseIntPipe) idParam: number): Promise<Pokemon> {
+  async findById(@Param('id', ParseIntPipe) id: number): Promise<Pokemon> {
     const foundPokemon = await this.pokemonService.findById(id);
     if (!foundPokemon) {
       throw new NotFoundException('Could not find pokemon with id ' + id);
@@ -59,7 +59,7 @@ export class PokemonController {
   async updateById(
     @Param('id', ParseIntPipe) id: number,
     @Body() data: UpdatePokemonDTO,
-  ): Promise<string> {
+  ): Promise<Pokemon> {
     if (Object.keys(data).length < 1) {
       throw new BadRequestException('Must update something');
     }

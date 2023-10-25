@@ -5,7 +5,7 @@ import { Pokemon } from './entities/pokemon.entity';
 import { EntityRepository } from '@mikro-orm/mysql';
 import { plainToInstance } from 'class-transformer';
 import { UpdatePokemonDTO } from './dto/update-pokemon.dto';
-import { wrap } from 'module';
+import { wrap } from '@mikro-orm/core';
 import { PokemonTypeService } from './pokemon-type.service';
 
 @Injectable()
@@ -58,4 +58,9 @@ export class PokemonService {
     const number = await this.pokemonRepository.nativeDelete({ id });
     return !!number;
   }
+
+  //mine
+  // async filterPokemon(data: CreatePokemonDto): Promise<Pokemon | null> {
+  //   const { typeIds } = CreatePokemonDto;
+  // }
 }
