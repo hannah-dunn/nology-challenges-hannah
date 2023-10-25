@@ -1,0 +1,196 @@
+{
+  "namespaces": [],
+  "tables": [
+    {
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "int",
+          "unsigned": true,
+          "autoincrement": true,
+          "primary": true,
+          "nullable": false,
+          "mappedType": "integer"
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "mappedType": "string"
+        },
+        "level": {
+          "name": "level",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "default": "1",
+          "mappedType": "integer"
+        },
+        "max_hp": {
+          "name": "max_hp",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "mappedType": "integer"
+        }
+      },
+      "name": "pokemon",
+      "indexes": [
+        {
+          "columnNames": [
+            "name"
+          ],
+          "composite": false,
+          "keyName": "pokemon_name_unique",
+          "primary": false,
+          "unique": true
+        },
+        {
+          "keyName": "PRIMARY",
+          "columnNames": [
+            "id"
+          ],
+          "composite": false,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {}
+    },
+    {
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "int",
+          "unsigned": true,
+          "autoincrement": true,
+          "primary": true,
+          "nullable": false,
+          "mappedType": "integer"
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "mappedType": "string"
+        }
+      },
+      "name": "pokemon_types",
+      "indexes": [
+        {
+          "columnNames": [
+            "name"
+          ],
+          "composite": false,
+          "keyName": "pokemon_types_name_unique",
+          "primary": false,
+          "unique": true
+        },
+        {
+          "keyName": "PRIMARY",
+          "columnNames": [
+            "id"
+          ],
+          "composite": false,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {}
+    },
+    {
+      "columns": {
+        "pokemon_type_id": {
+          "name": "pokemon_type_id",
+          "type": "int",
+          "unsigned": true,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "mappedType": "integer"
+        },
+        "pokemon_id": {
+          "name": "pokemon_id",
+          "type": "int",
+          "unsigned": true,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "mappedType": "integer"
+        }
+      },
+      "name": "pokemon_types_pokemon",
+      "indexes": [
+        {
+          "columnNames": [
+            "pokemon_type_id"
+          ],
+          "composite": false,
+          "keyName": "pokemon_types_pokemon_pokemon_type_id_index",
+          "primary": false,
+          "unique": false
+        },
+        {
+          "columnNames": [
+            "pokemon_id"
+          ],
+          "composite": false,
+          "keyName": "pokemon_types_pokemon_pokemon_id_index",
+          "primary": false,
+          "unique": false
+        },
+        {
+          "keyName": "PRIMARY",
+          "columnNames": [
+            "pokemon_type_id",
+            "pokemon_id"
+          ],
+          "composite": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {
+        "pokemon_types_pokemon_pokemon_type_id_foreign": {
+          "constraintName": "pokemon_types_pokemon_pokemon_type_id_foreign",
+          "columnNames": [
+            "pokemon_type_id"
+          ],
+          "localTableName": "pokemon_types_pokemon",
+          "referencedColumnNames": [
+            "id"
+          ],
+          "referencedTableName": "pokemon_types",
+          "deleteRule": "cascade",
+          "updateRule": "cascade"
+        },
+        "pokemon_types_pokemon_pokemon_id_foreign": {
+          "constraintName": "pokemon_types_pokemon_pokemon_id_foreign",
+          "columnNames": [
+            "pokemon_id"
+          ],
+          "localTableName": "pokemon_types_pokemon",
+          "referencedColumnNames": [
+            "id"
+          ],
+          "referencedTableName": "pokemon",
+          "deleteRule": "cascade",
+          "updateRule": "cascade"
+        }
+      }
+    }
+  ]
+}
